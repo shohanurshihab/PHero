@@ -70,5 +70,27 @@ console.log(getCngFare(5,true,10));
 
 //Q-5:
 const getChaseVerdict = (target, scored, ballsLeft) => {
-    
+    runsNeeded = target - scored;
+    if(runsNeeded < 1 ){
+        return "Won";
+    }
+    else if(ballsLeft<1){
+        return "Lost";
+    }
+    else{
+        const requiredRate = (runsNeeded / ballsLeft) * 6;
+        let verdict = ""
+        if(requiredRate <7){
+            verdict = "Comfortable"
+        }
+        else if(requiredRate > 6 || requiredRate <=12){
+            verdict = "Tough";
+        }
+        else{
+            verdict = "Impossible"
+        }
+        return "\""+"Need " + runsNeeded + " runs in " + ballsLeft + " balls | " + verdict +"\"";
+    }
+
 }
+console.log(getChaseVerdict(200, 190, 0));
