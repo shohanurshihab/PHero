@@ -83,14 +83,14 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
         if(requiredRate <7){
             verdict = "Comfortable"
         }
-        else if(requiredRate > 6 || requiredRate <=12){
+        else if(requiredRate < 12){
             verdict = "Tough";
         }
-        else{
-            verdict = "Impossible"
+        else if(requiredRate > 12){
+            verdict = "Almost Impossible"
         }
         return "\""+"Need " + runsNeeded + " runs in " + ballsLeft + " balls | " + verdict +"\"";
     }
 
 }
-console.log(getChaseVerdict(200, 190, 0));
+console.log(getChaseVerdict(100, 70,12));
