@@ -9,7 +9,7 @@ function describeValue(value) {
         else{
             comment = "falsy";
         }
-        result = "\"" + typecheck + " | " + comment + "\"";
+        result = typecheck + " | " + comment ;
         return result;
 }
 console.log(describeValue("")); 
@@ -86,8 +86,8 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
         else{
             verdict = "Almost Impossible"
         }
-        return "\""+"Need " + runsNeeded + " runs in " + ballsLeft + " balls | " + verdict +"\"";
+        return "Need " + runsNeeded + " runs in " + ballsLeft + " balls | " + verdict ;
     }
 
 }
-console.log(getChaseVerdict(150, 149, 1));
+console.log(getChaseVerdict(100, 70, 12));
