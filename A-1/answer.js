@@ -1,5 +1,5 @@
 //Q-1:
-function describevalue(value) {
+function describeValue(value) {
     let typecheck = typeof value;
     let comment = ""; 
     let result = "";
@@ -10,12 +10,9 @@ function describevalue(value) {
             comment = "falsy";
         }
         result = "\"" + typecheck + " | " + comment + "\"";
-        //console.log(result);
         return result;
-        
-    
 }
-describevalue(""); 
+console.log(describeValue("")); 
 
 //Q-2:
 function getDayType(day) {
@@ -28,12 +25,12 @@ function getDayType(day) {
     case "tuesday":
     case "wednesday":
     case "thursday":
-        return "Weekday";
+        return "Working Day";
     default:
         return "Invalid Day";
    } 
 }
-// console.log(getDayType("Friday"));
+console.log(getDayType("MONDAY"));
 
 //Q-3:
 function validateUsername(username) {
