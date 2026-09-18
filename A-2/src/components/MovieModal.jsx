@@ -30,16 +30,17 @@ export default function MovieModal({ show, onClose }) {
           />
         </div>
 
-        <div className="p-6">
-          <h2 className="text-3xl font-bold">{show.name}</h2>
-
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-slate-300">
+        <div className="p-3">
+          <div className="flex mb-5 flex-wrap items-center justify-center gap-3 text-sm text-slate-300">
             <span>⭐ {show.rating?.average ?? "N/A"}</span>
             <span>•</span>
             <span>📅 {show.premiered?.slice(0, 4) ?? "N/A"}</span>
             <span>•</span>
-            <span>{show.genres?.join(", ") || "not found"}</span>
+            <span>{show.genres?.join(", ") || "N/A"}</span>
           </div>
+          <h2 className="text-3xl font-bold">{show.name}</h2>
+
+          
 
           <p className="mt-5 leading-7 text-slate-200">{summary}</p>
 
