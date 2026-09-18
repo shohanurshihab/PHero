@@ -12,7 +12,7 @@ export default function MoviesPage({ shows, query, setQuery, selectedShow, setSe
           className="mb-8 w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white placeholder:text-slate-400"
         />
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {shows.map((show) => (
             <div
               key={show.id}
